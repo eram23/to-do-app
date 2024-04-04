@@ -1,0 +1,259 @@
+/* resets the margin and padding of all elements to 0 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 100; */
+  /* font-style: normal; */
+}
+
+/* CONTAINER FOR BACKGROUND COLOR */
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #2f4f4f;
+    padding: 10px;
+    /* display: flex; */
+}
+
+/* CONTAINER FOR THE ACTUAL APP WHERE EVERYTHING IS HELD TOGETHER */
+.study-app {
+    width: 500px;
+    background-color: whitesmoke;
+    height: min-content;
+    margin: 100px auto;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 25px;
+    
+}
+
+/* STYLING FOR THE TIMER AND BUTTONS BELOW */
+.timer {
+    margin: 20px 0 10px 0;
+}
+
+.timer-btn {
+    width: 25px;
+    height: 25px;
+    margin: 0 5px;
+    border-radius: 50%;
+    border: none;
+    background-color: whitesmoke;
+    color: rgb(48, 59, 48);
+    font-size: 16px;
+}
+
+.timer-btn:hover {
+    background-color: rgb(218, 218, 218);
+    cursor: pointer;
+}
+
+/* BUTTONS FOR INTERACTING WITH THE TIMERS */
+#play-btn {
+    width: 25px;
+    height: 25px;
+    background-image: url(images/play.svg);
+    background-size: cover;
+    border: none;
+}
+
+#play-btn:hover {
+    cursor: pointer;
+    background-image: url(images/play-hover.svg);
+}
+
+#pause-btn {
+    width: 25px;
+    height: 25px;
+    background-image: url(images/pause.svg);
+    background-size: cover;
+    border: none;
+}
+
+#pause-btn:hover {
+    cursor: pointer;
+    background-image: url(images/pause-hover.svg);
+}
+
+.hide {
+    display: none;
+}
+
+#restart-btn {
+    width: 25px;
+    height: 25px;
+    background-image: url(images/restart.svg);
+    background-size: cover;
+}
+
+#restart-btn:hover {
+    cursor: pointer;
+    background-image: url(images/restart-hover.svg);
+}
+
+#add-btn {
+    width: 25px;
+    height: 25px;
+    background-image: url(images/add-btn.svg);
+    background-size: cover;
+}
+
+#add-btn:hover {
+    cursor: pointer;
+    background-image: url(images/add-btn-hover.svg);
+}
+
+#minus-btn {
+    width: 25px;
+    height: 25px;
+    background-image: url(images/minus-btn.svg);
+    background-size: cover;
+}
+
+#minus-btn:hover {
+    cursor: pointer;
+    background-image: url(images/minus-btn-hover.svg);
+}
+
+/* BREAK BTNS, TEXT, AND TIMER */
+#break-add-btn {
+    width: 25px;
+    height: 25px;
+    background-image: url(images/add-btn.svg);
+    background-size: cover;
+}
+
+#break-add-btn:hover {
+    cursor: pointer;
+    background-image: url(images/add-btn-hover.svg);
+}
+
+#break-minus-btn {
+    width: 25px;
+    height: 25px;
+    background-image: url(images/minus-btn.svg);
+    background-size: cover;
+}
+
+#break-minus-btn:hover {
+    cursor: pointer;
+    background-image: url(images/minus-btn-hover.svg);
+}
+
+#break-text {
+    margin: 10px 0;
+    color: rgb(103, 116, 116);
+}
+
+#break-timer {
+    border: none;
+    text-align: right;
+}
+
+/* INPUT FIELD AND TASK LIST STYLING BELOW */
+.task-list-container {
+    width: 425px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.task-list-container h2 {
+    font-size: 28pt;
+    margin-bottom: 20px;
+    color: #1c4746;
+}
+
+#study-timer {
+    font-size: 42pt;
+    color: rgb(103, 116, 116);
+}
+
+#input-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    max-width: 400px;
+    border-radius: 30px;
+    background-color: rgb(204, 208, 213);
+    padding-left: 25px;
+    margin: 5px auto;
+}
+
+#enter-tasks {
+    height: 20px;
+    color: rgb(48, 59, 48);
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+#add-task-btn {
+    height: 50px;
+    width: 80px ;
+    background-color:rgb(103, 116, 116);
+    color: white;
+    border-radius: 30px;
+    border: none;
+}
+
+#add-task-btn:hover {
+    background-color: #1c4746;
+    cursor: pointer;
+}
+
+#list-of-tasks {
+    list-style: none;
+    margin-top: 10px;
+    display: block;
+}
+
+ ul li {
+    position: relative;
+    padding: 15px 8px 15px 50px;
+    cursor: pointer;
+    text-align: left;
+ }
+
+li::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-image: url(images/unchecked.svg);
+    background-size: cover;
+    background-position: center;
+    top: 15px;
+    left: 5px;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(images/checked.svg);
+}
+
+ ul li span {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    text-decoration: none;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: 600;
+    border-radius: 50%;
+ }
+
+ ul li span:hover {
+    background-color: lightgray;
+ }
